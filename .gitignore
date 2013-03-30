@@ -1,0 +1,16 @@
+*~
+*.local.properties
+
+# gradle files
+.gradle
+build
+
+# intellij files
+*.iml
+*.ipr
+*.iws
+out
+atlassian-ide-plugin.xml
+
+# macosx files
+.DS_Store
