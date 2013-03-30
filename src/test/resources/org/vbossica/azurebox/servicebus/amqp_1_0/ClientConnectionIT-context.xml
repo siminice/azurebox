@@ -21,13 +21,13 @@
     <prop key="queue.testqueue">${client_1.0.queue}</prop>
   </util:properties>
 
-  <jee:jndi-lookup id="jmsQueueConnectionFactory" jndi-name="qpidConnectionfactory" environment-ref="jndiEnvironment"/>
-  <jee:jndi-lookup id="testQueueDestination" jndi-name="testqueue" environment-ref="jndiEnvironment"/>
+  <jee:jndi-lookup id="jmsConnectionFactory" jndi-name="qpidConnectionfactory" environment-ref="jndiEnvironment"/>
+  <jee:jndi-lookup id="testQueue" jndi-name="testqueue" environment-ref="jndiEnvironment"/>
 
   <bean class="org.springframework.jms.core.JmsTemplate"
-    p:connectionFactory-ref="jmsQueueConnectionFactory"/>
+    p:connectionFactory-ref="jmsConnectionFactory"/>
 
-  <bean id="testQueueDestinationName" class="java.lang.String">
+  <bean id="testQueueName" class="java.lang.String">
     <constructor-arg value="${client_1.0.queue}"/>
   </bean>
 

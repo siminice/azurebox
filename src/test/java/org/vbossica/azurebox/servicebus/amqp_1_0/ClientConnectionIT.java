@@ -41,10 +41,10 @@ public class ClientConnectionIT extends AbstractJUnit4SpringContextTests {
   @Autowired
   private JmsTemplate template;
   @Autowired
-  @Qualifier("testQueueDestination")
+  @Qualifier("testQueue")
   private Queue destination;
   @Autowired
-  @Qualifier("testQueueDestinationName")
+  @Qualifier("testQueueName")
   private String destinationName;
 
   @Test
