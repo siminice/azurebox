@@ -29,10 +29,18 @@ public class CloudStorageAccountFactoryBean implements FactoryBean<CloudStorageA
   private String account;
   private String accountKey;
 
+    /**
+     * Windows Azure Blob Storage Services allows 'http' or 'https'
+     * @param protocol 'http' or 'https'
+     */
   public void setProtocol(String protocol) {
     this.protocol = protocol;
   }
 
+    /**
+     * storage account to use
+     * @param account
+     */
   public void setAccount(String account) {
     this.account = account;
   }
@@ -43,7 +51,7 @@ public class CloudStorageAccountFactoryBean implements FactoryBean<CloudStorageA
 
   @Override
   public void afterPropertiesSet() throws Exception {
-    Assert.hasLength(protocol, "protocol must set set!");
+    Assert.hasLength(protocol, "protocol must be set!");
     Assert.hasLength(account, "account must be set");
     Assert.hasLength(accountKey, "accountKey must be set");
   }

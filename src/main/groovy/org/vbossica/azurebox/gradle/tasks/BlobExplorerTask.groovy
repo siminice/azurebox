@@ -15,15 +15,9 @@
  */
 package org.vbossica.azurebox.gradle.tasks
 
-import com.microsoft.windowsazure.services.blob.client.BlobContainerPermissions
-import com.microsoft.windowsazure.services.blob.client.BlobContainerPublicAccessType
-import com.microsoft.windowsazure.services.blob.client.CloudBlockBlob
-import com.microsoft.windowsazure.services.blob.client.ListBlobItem
 import com.microsoft.windowsazure.services.core.storage.CloudStorageAccount
 import org.gradle.api.DefaultTask
 import org.gradle.api.tasks.TaskAction
-import org.slf4j.Logger
-import org.slf4j.LoggerFactory
 import org.vbossica.azurebox.gradle.AzureboxPluginConvention
 
 /**
