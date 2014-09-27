@@ -8,13 +8,15 @@ sourceCompatibility = 1.6
 version = '1.0.0-SNAPSHOT'
 group = 'org.vbossica'
 
-ext.projectUrl = 'http://github.com/vbossica/azurebox'
-ext.years = '2013'
+ext {
+  projectUrl = 'http://github.com/vbossica/azurebox'
+  years = '2013-2014'
 
-ext.azureVersion = '0.4.2'
-ext.junitVersion = '4.11'
-ext.qpidVersion = '0.20'
-ext.springVersion = '3.2.2.RELEASE'
+  azureVersion = '0.4.2'
+  junitVersion = '4.11'
+  qpidVersion = '0.20'
+  springVersion = '3.2.2.RELEASE'
+}
 
 repositories {
   mavenCentral()
@@ -26,8 +28,6 @@ configurations {
 }
 
 dependencies {
-  groovy localGroovy()
-
   compile gradleApi()
 
   provided "com.microsoft.windowsazure:microsoft-windowsazure-api:${azureVersion}",
@@ -107,4 +107,8 @@ idea {
       component.mapping.@vcs = 'Git'
     }
   }
+}
+
+task wrapper(type: Wrapper) {
+  gradleVersion = '2.0'
 }
